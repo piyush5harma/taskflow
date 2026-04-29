@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TaskFlow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>TaskFlow</h1>
+
+  <div class="input-section">
+    <input type="text" id="taskInput" placeholder="Enter task...">
+    <input type="date" id="dueDate">
+    <button onclick="addTask()">Add</button>
+  </div>
+
+  <input type="text" id="search" placeholder="Search tasks..." onkeyup="renderTasks()">
+
+  <div class="filters">
+    <button onclick="renderTasks('all')">All</button>
+    <button onclick="renderTasks('completed')">Completed</button>
+    <button onclick="renderTasks('pending')">Pending</button>
+    <button onclick="toggleDarkMode()">🌙</button>
+  </div>
+
+  <div id="stats"></div>
+  <ul id="taskList"></ul>
+</div>
+
+<script src="taskManager.js"></script>
+<script src="ui.js"></script>
+</body>
+</html>
